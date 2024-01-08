@@ -6,5 +6,5 @@ from .models import AboutCompany
 class AboutView(ListView):
     model = AboutCompany
     queryset = AboutCompany.objects.first()
-    template_name = 'about/about.html'
+    template_name = 'about.html'
     context_object_name = "about"
