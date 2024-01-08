@@ -5,9 +5,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class HomeData(models.Model):
     title = models.CharField(max_length=250)
     about = RichTextUploadingField()
-    contact_title = models.CharField(max_length=350)
     image_vmv = models.ImageField(upload_to='home')
-    why_choose_us = models.TextField(null=True)
     vision = RichTextUploadingField()
     mission = RichTextUploadingField()
     values = RichTextUploadingField()
@@ -44,7 +42,7 @@ class CustomersReview(models.Model):
     home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='customer')
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class SiteInformation(models.Model):

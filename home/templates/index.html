@@ -1,5 +1,6 @@
 {% extends 'base/main_base.html' %}
 {% load static %}
+{% block title %}{{ home.title }}{% endblock title %}
 {% block content %}
     <div class="flexslider flexslider-simple h-full loading">
         <ul class="slides">
@@ -167,18 +168,7 @@
         </div>
         <!--/.container-->
     </section>
-    <section class=" background-primary py-6">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md">
-                    <h4 class="color-white mb-0">{{ home.contact_title }}</h4>
-                </div>
-                <div class="col-md-auto mt-md-0 mt-4"><a class="btn btn-white btn-capsule" href="contact.html">Contact Us</a></div>
-            </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </section>
+    {% include "base/shared/contact_share.html" %}
     <section class=" background-white">
         <div class="container">
             <div class="row">
