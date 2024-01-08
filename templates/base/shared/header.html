@@ -8,7 +8,7 @@
             <div class="col-auto ml-md-auto order-md-2 d-none d-sm-block"><span class="fa fa-clock-o color-warning fw-800 icon-position-fix"></span>
                 <p class="ml-2 mb-0 fs--1 d-inline color-white fw-700">Monday - Friday, 09:00 - 17:00.</p>
             </div>
-            <div class="col-auto"><span class="fa fa-phone color-warning fw-800 icon-position-fix"></span><a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="tel:2123865575">{{ info.phone }}</a></div>
+            <div class="col-auto"><span class="fa fa-phone color-warning fw-800 icon-position-fix"></span><a class="ml-2 mb-0 fs--1 d-inline color-white fw-700" href="tel:{{ info.phone }}">{{ info.phone }}</a></div>
         </div>
         <!--/.row-->
     </div>
@@ -41,7 +41,7 @@
                             <li><a href="news.html">Investment Line</a></li>
                         </ul>
                     </li>
-                    <li><a class="d-block mr-md-9" href="contact.html">Contact</a></li>
+                    <li><a class="d-block mr-md-9" href="{% url "contact:page" %}">Contact</a></li>
                 </ul>
                 <ul class="navbar-nav ml-lg-auto">
                     <li><a href="JavaScript:void(0)">En</a>
