@@ -39,7 +39,7 @@
                 <div class="d-flex align-items-center h-100">
                     <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
                         <h5 data-zanim='{"delay":0}'>Message From CEO</h5>
-                        <p class="my-4" data-zanim='{"delay":0.1}'>{{ about.quote|safe }}</p>
+                        <p class="my-4" data-zanim='{"delay":0.1}'>{{ about.quote|striptags }}</p>
                         <h5 class="text-uppercase mt-3 fw-500 mb-1" data-zanim='{"delay":0.3}'>{{ about.ceo_name }}</h5>
                         <h6 class="color-7 fw-600" data-zanim='{"delay":0.4}'>{{ about.ceo_position }}</h6>
                     </div>
@@ -55,7 +55,7 @@
                 <div class="background-white px-3 mt-6 px-0 py-5 px-lg-5 radius-secondary">
                     <h5>{{ about.title }}</h5>
                     <p class="mt-3">
-                        {{ about.description|safe }}
+                        {{ about.description|striptags }}
                     </p>
                 </div>
             </div>

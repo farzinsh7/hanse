@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',
+    'contact_us.apps.ContactUsConfig',
 ]
 
 MIDDLEWARE = [
