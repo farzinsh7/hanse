@@ -1,4 +1,4 @@
-{% comment %} {% load render_partial %} {% endcomment %}
+{% load render_partial %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en-US">
@@ -28,9 +28,9 @@
     <body data-spy="scroll" data-target=".inner-link" data-offset="60">
         <main>
         {% include "base/shared/preloader.html" %}
-        {% include "base/shared/header.html" %}
+        {% render_partial 'page:head' %}
         {% block content %}{% endblock content %}
-        {% include "base/shared/footer.html" %}
+        {% render_partial 'page:foot' %}
     </main>
         <!--  -->
         <!--    JavaScripts-->
