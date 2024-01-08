@@ -7,6 +7,7 @@ class HomeData(models.Model):
     about = RichTextUploadingField()
     contact_title = models.CharField(max_length=350)
     image_vmv = models.ImageField(upload_to='home')
+    why_choose_us = models.TextField(null=True)
     vision = RichTextUploadingField()
     mission = RichTextUploadingField()
     values = RichTextUploadingField()
@@ -36,7 +37,7 @@ class Features(models.Model):
         return self.title
 
 class CustomersReview(models.Model):
-    title = models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
     image = models.ImageField(upload_to='home/customers')
     description = models.TextField(null=True)
@@ -50,7 +51,7 @@ class SiteInformation(models.Model):
     title = models.CharField(max_length=200)
     logo = models.ImageField(upload_to='logo', null=True)
     description = models.TextField(null=True)
-    phone = models.CharField(max_length=11, null=True)
+    phone = models.CharField(max_length=50, null=True)
     address = models.CharField(max_length=300, null=True)
     email = models.EmailField(null=True)
 

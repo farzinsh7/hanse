@@ -3,23 +3,24 @@
 {% block content %}
     <div class="flexslider flexslider-simple h-full loading">
         <ul class="slides">
+            {% for slide in home.sliders.all %}
             <li data-zanim-timeline="{}">
                 <section class="py-0">
                     <div>
-                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({% static "images/header-6.jpg" %});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
+                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({{ slide.image.url }});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
                         </div>
                         <!--/.background-holder-->
                         <div class="container">
                             <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
                                 <div class="col-sm-8 col-lg-7 px-5 px-sm-3">
                                     <div class="overflow-hidden">
-                                        <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>Helping Leaders</h1>
+                                        <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>{{ slide.title }}</h1>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.1}'>We look forward to help you in taking your company to new height.</p>
+                                        <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.1}'>{{ slide.description|truncatewords:15 }}</p>
                                     </div>
                                     <div class="overflow-hidden">
-                                        <div class="zopacity" data-zanim='{"delay":0.2}'><a class="btn btn-primary mr-3 mt-3" href="#">Read more<span class="fa fa-chevron-right ml-2"></span></a><a class="btn btn-warning mt-3" href="contact.html">Contact us<span class="fa fa-chevron-right ml-2"></span></a></div>
+                                        <div class="zopacity" data-zanim='{"delay":0.2}'><a class="btn btn-primary mr-3 mt-3" href="{{ slide.link }}">Read more<span class="fa fa-chevron-right ml-2"></span></a><a class="btn btn-warning mt-3" href="contact.html">Contact us<span class="fa fa-chevron-right ml-2"></span></a></div>
                                     </div>
                                 </div>
                             </div>
@@ -29,90 +30,26 @@
                     <!--/.container-->
                 </section>
             </li>
-            <li data-zanim-timeline="{}">
-                <section class="py-0">
-                    <div>
-                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({% static "images/header-5.jpg" %});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
-                        </div>
-                        <!--/.background-holder-->
-                        <div class="container">
-                            <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
-                                <div class="col-sm-8 col-lg-7 px-5 px-sm-3">
-                                    <div class="overflow-hidden">
-                                        <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>Expert Consultants</h1>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.1}'>Over 10 years of experience in helping clients finding comprehensive solutions.</p>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <div class="zopacity" data-zanim='{"delay":0.2}'><a class="btn btn-primary mr-3 mt-3" href="#">Read more<span class="fa fa-chevron-right ml-2"></span></a><a class="btn btn-warning mt-3" href="contact.html">Contact us<span class="fa fa-chevron-right ml-2"></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.row-->
-                    </div>
-                    <!--/.container-->
-                </section>
-            </li>
-            <li data-zanim-timeline="{}">
-                <section class="py-0">
-                    <div>
-                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({% static "images/header-1.jpg" %});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
-                        </div>
-                        <!--/.background-holder-->
-                        <div class="container">
-                            <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
-                                <div class="col-sm-8 col-lg-7 px-5 px-sm-3">
-                                    <div class="overflow-hidden">
-                                        <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>Growth Partners</h1>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.1}'>Connect with top consultants hand-picked by Elixir consulting and finance. </p>
-                                    </div>
-                                    <div class="overflow-hidden">
-                                        <div class="zopacity" data-zanim='{"delay":0.2}'><a class="btn btn-primary mr-3 mt-3" href="#">Read more<span class="fa fa-chevron-right ml-2"></span></a><a class="btn btn-warning mt-3" href="contact.html">Contact us<span class="fa fa-chevron-right ml-2"></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.row-->
-                    </div>
-                    <!--/.container-->
-                </section>
-            </li>
+            {% endfor %}
         </ul>
     </div>
     <section class="background-white  text-center">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-10 col-md-6">
-                    <h3 class="color-primary fs-2 fs-lg-3">Welcome to the Elixir</h3>
-                    <p class="px-lg-4 mt-3">Get expert consultancy and support with Elixir, an advisory firm that stand by your side always.</p>
+                    <h3 class="color-primary fs-2 fs-lg-3">Welcome to the Hanse</h3>
+                    <p class="px-lg-4 mt-3">{{ home.about|safe }}</p>
                     <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
                 </div>
             </div>
             <div class="row mt-4 mt-md-5">
-                <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                    <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"delay":0}' style="height:100px; width:100px"><span class="icon-Bar-Chart5 fs-3 color-blueish mx-auto fw-600"></span></div>
-                    <h5 class="mt-4" data-zanim='{"delay":0.1}'>Business Consulting</h5>
-                    <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Solution for every business related problems, readily <br />and skillfully.</p>
+                {% for item in home.features.all  %}
+                <div class="col-sm-4 col-lg-4 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
+                    <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"delay":0}' style="height:100px; width:100px"><span class="{{ item.icon }} fs-3 color-blueish mx-auto fw-600"></span></div>
+                    <h5 class="mt-4" data-zanim='{"delay":0.1}'>{{ item.title }}</h5>
+                    <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>{{ item.description }}</p>
                 </div>
-                <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                    <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px"><span class="icon-Clock fs-3 color-blueish mx-auto fw-600"></span></div>
-                    <h5 class="mt-4" data-zanim='{"delay":0.1}'>Risk Management</h5>
-                    <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Calculate every possible risk in your business, take <br />control over them.</p>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                    <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px"><span class="icon-Idea-2 fs-3 color-blueish mx-auto fw-600"></span></div>
-                    <h5 class="mt-4" data-zanim='{"delay":0.1}'>Market Research</h5>
-                    <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Know the market before taking any step, reduce <br />risks before you go. </p>
-                </div>
-                <div class="col-sm-6 col-lg-3 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
-                    <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"trigger":"scroll"}' style="height:100px; width:100px"><span class="icon-Headset fs-3 color-blueish mx-auto fw-600"></span></div>
-                    <h5 class="mt-4" data-zanim='{"delay":0.1}'>Quality Services</h5>
-                    <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>Experience unparalleled service, from beginning<br />to final construction.</p>
-                </div>
+                {% endfor %}               
             </div>
             <!--/.row-->
         </div>
@@ -199,29 +136,29 @@
         <div class="container">
             <div class="row mb-6">
                 <div class="col">
-                    <h3 class="text-center fs-2 fs-lg-3">Why Choose Elixir</h3>
+                    <h3 class="text-center fs-2 fs-lg-3">Why Choose Hanse</h3>
                     <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll">
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 pr-0 pr-lg-3"><img class="radius-secondary" src="{% static "images/why-choose-us.jpg" %}" alt="" /></div>
+                <div class="col-lg-6 pr-0 pr-lg-3"><img class="radius-secondary" src="{{ home.image_vmv.url }}" alt="" /></div>
                 <div class="col-lg-6 px-lg-5 mt-6 mt-lg-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0" data-zanim='{"delay":0}'>
-                            <h5 class="fs-0 fs-lg-1"><span class="ion-chatbubble-working fs-2 mr-2 icon-position-fix fw-800"></span>We Are Professional</h5>
-                            <p class="mt-3 px-lg-3">We resource, train, speak, mentor and encourage; marketplace leaders, business owners and career professionals to be effective in the workplace.</p>
+                            <h5 class="fs-0 fs-lg-1"><span class="ion-chatbubble-working fs-2 mr-2 icon-position-fix fw-800"></span>Vision</h5>
+                            <p class="mt-3 px-lg-3">{{ home.vision|safe }}</p>
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.1}'>
-                            <h5 class="fs-0 fs-lg-1"><span class="ion-android-color-palette fs-2 mr-2 icon-position-fix fw-800"></span>We Are Creative</h5>
-                            <p class="mt-3 px-lg-3">With so many factors to consider when deciding how to characterize your company , wouldn’t it be great to have a group of forward-thinking, well-informed individuals on board who know what they’re doing?</p>
+                            <h5 class="fs-0 fs-lg-1"><span class="ion-android-color-palette fs-2 mr-2 icon-position-fix fw-800"></span>Mission</h5>
+                            <p class="mt-3 px-lg-3">{{ home.mission|safe }}</p>
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.2}'>
-                            <h5 class="fs-0 fs-lg-1"><span class="ion-ios-timer fs-2 mr-2 icon-position-fix fw-600"></span>24/7 Great Support</h5>
-                            <p class="mt-3 px-lg-3">Design clever and compelling marketing strategies, improve product positioning, and drive conversion rates, Elixir is all time available to guide you.</p>
+                            <h5 class="fs-0 fs-lg-1"><span class="ion-ios-timer fs-2 mr-2 icon-position-fix fw-600"></span>Values</h5>
+                            <p class="mt-3 px-lg-3">{{ home.values|safe }}</p>
                         </div>
                     </div>
                 </div>
@@ -234,7 +171,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md">
-                    <h4 class="color-white mb-0">If you have any query related investment... <br class="d-md-none" />we are available 24/7</h4>
+                    <h4 class="color-white mb-0">{{ home.contact_title }}</h4>
                 </div>
                 <div class="col-md-auto mt-md-0 mt-4"><a class="btn btn-white btn-capsule" href="contact.html">Contact Us</a></div>
             </div>
@@ -247,30 +184,16 @@
             <div class="row">
                 <div class="col">
                     <div class="owl-carousel owl-theme owl-dot-round" data-options='{"nav":true,"dots":false,"loop":true,"autoplay":true,"autoplayHoverPause":true,"items":1}'>
+                        {% for review in home.customer.all  %}
                         <div class="row px-lg-8">
-                            <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{% static "images/client1.png" %}" alt="Member" style="width: auto" /></div>
+                            <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{{ review.image.url }}" alt="Member" style="width: auto" /></div>
                             <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
-                                <p class="lead fw-400">Their work on our website and Internet marketing has made a significant different to our business. We’ve seen a 425% increase in quote requests from the website which has been pretty remarkable – but I’d always like to see more!</p>
-                                <h6 class="fs-0 mb-1 mt-4">Michael Clarke</h6>
-                                <p class="mb-0 color-7">CEO, A.E.T Institute</p>
+                                <p class="lead fw-400">{{ review.description }}</p>
+                                <h6 class="fs-0 mb-1 mt-4">{{ review.name }}</h6>
+                                <p class="mb-0 color-7">{{ review.position }}</p>
                             </div>
                         </div>
-                        <div class="row px-lg-8">
-                            <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{% static "images/client2.png" %}" alt="Member" style="width: auto" /></div>
-                            <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
-                                <p class="lead fw-400">Writing case studies was a daunting task for us. We didn’t know where to begin or what questions to ask, and clients never seemed to follow through when we asked. Elixir team did everything – with almost no time or effort for me!</p>
-                                <h6 class="fs-0 mb-1 mt-4">Maria Sharapova</h6>
-                                <p class="mb-0 color-7">Managing Director, Themewagon Inc.</p>
-                            </div>
-                        </div>
-                        <div class="row px-lg-8">
-                            <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{% static "images/client3.png" %}" alt="Member" style="width: auto" /></div>
-                            <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
-                                <p class="lead fw-400">As a sales gamification company, we were skeptical to work with a consultant to optimize our sales emails, but Elixir was highly recommended by many other Y-Combinator startups we knew. Elixir helped us run a ~6 week email campaign.</p>
-                                <h6 class="fs-0 mb-1 mt-4">David Beckham</h6>
-                                <p class="mb-0 color-7">Chairman, Harmony Corporation</p>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

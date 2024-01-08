@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from .models import SiteInformation
+from .models import SiteInformation, HomeData
 from django.views.generic import ListView
 
-def index(request):
-    context = {"Hello": "Hello"}
-    return render(request, "index.html", context)
+class Index(ListView):
+    model = HomeData
+    template_name = 'index.html'
+    context_object_name = "home"
+    queryset = HomeData.objects.first()
 
 
 

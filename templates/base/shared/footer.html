@@ -24,52 +24,24 @@
                 <div class="row">
                     <div class="col-6 col-lg-4 color-white ml-lg-auto">
                         <ul class="list-unstyled">
-                            <li class="mb-3"><a class="color-white" href="#">Contact Us</a></li>
-                            <li class="mb-3"><a class="color-white" href="#">FAQ</a></li>
-                            <li class="mb-3"><a class="color-white" href="#">Privacy Policy</a></li>
-                            <li class="mb-3"><a class="color-white" href="#">Terms of Use</a></li>
-                            <li class="mb-3"><a class="color-white" href="#">Global Office</a></li>
-                            <li class="mb-3"><a class="color-white" href="#">Local Office</a></li>
+                            {% for page in info.links.all  %}
+                                <li class="mb-3"><a class="color-white" href="{{ page.link }}">{{ page.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
-                    <div class="col-6 col-sm-5 ml-sm-auto"><a href="#">
-                            <div class="row mb-3 align-items-center no-gutters">
-                                <div class="col-auto">
-                                    <div class="background-primary text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;"><span class="w-100 fa fa-linkedin color-white"></span></div>
-                                </div>
-                                <div class="col-6 pl-3">
-                                    <h5 class="fs-0 color-white mb-0 d-inline-block">Linkedin</h5>
-                                </div>
+                    <div class="col-6 col-sm-5 ml-sm-auto">
+                        {% for social in info.socials.all  %}
+                        <a href="{{ social.link }}">
+                        <div class="row mb-3 align-items-center no-gutters">
+                            <div class="col-auto">
+                                <div class="background-primary text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;"><span class="w-100 fa {{ social.icon }} color-white"></span></div>
                             </div>
-                        </a><a href="#">
-                            <div class="row mb-3 align-items-center no-gutters">
-                                <div class="col-auto">
-                                    <div class="background-primary text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;"><span class="w-100 fa fa-twitter color-white"></span></div>
-                                </div>
-                                <div class="col-6 pl-3">
-                                    <h5 class="fs-0 color-white mb-0 d-inline-block">Twitter</h5>
-                                </div>
+                            <div class="col-6 pl-3">
+                                <h5 class="fs-0 color-white mb-0 d-inline-block">{{ social.label }}</h5>
                             </div>
-                        </a><a href="#">
-                            <div class="row mb-3 align-items-center no-gutters">
-                                <div class="col-auto">
-                                    <div class="background-primary text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;"><span class="w-100 fa fa-facebook color-white"></span></div>
-                                </div>
-                                <div class="col-6 pl-3">
-                                    <h5 class="fs-0 color-white mb-0 d-inline-block">Facebook</h5>
-                                </div>
-                            </div>
-                        </a><a href="#">
-                            <div class="row mb-3 align-items-center no-gutters">
-                                <div class="col-auto">
-                                    <div class="background-primary text-center d-flex align-items-center radius-primary" style="height: 40px; width: 40px;"><span class="w-100 fa fa-google-plus color-white"></span></div>
-                                </div>
-                                <div class="col-6 pl-3">
-                                    <h5 class="fs-0 color-white mb-0 d-inline-block">Google+</h5>
-                                </div>
-                            </div>
-                        </a></div>
-                </div>
+                        </div>
+                        {% endfor %}
+                    </div>
             </div>
         </div>
         <!--/.row-->
@@ -79,9 +51,9 @@
 <section class="background-primary text-center py-4">
     <div class="container">
         <div class="row align-items-center" style="opacity: 0.85">
-            <div class="col-sm-3 text-sm-left"><a href="index.html"><img src="{% static "images/logo-light.png" %}" alt="" /></a></div>
+            <div class="col-sm-3 text-sm-left"><a href="{% url "page:index" %}"><img src="{{ info.logo.url }}" alt="{{ info.title }}" /></a></div>
             <div class="col-sm-6 mt-3 mt-sm-0">
-                <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright 2024 Hanse Trading.</p>
+                <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright 2024 Hanse Trading GmbH.</p>
             </div>
             <div class="col text-sm-right mt-3 mt-sm-0"><a class="color-white" href="https://farzinshams.com/" target="_blank"> Designed by Farzin</a></div>
         </div>
