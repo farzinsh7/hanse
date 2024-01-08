@@ -1,3 +1,4 @@
+{% comment %} {% load render_partial %} {% endcomment %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en-US">
@@ -25,7 +26,12 @@
         {% include "base/_header_refrences.html" %}
     </head>
     <body data-spy="scroll" data-target=".inner-link" data-offset="60">
+        <main>
+        {% include "base/shared/preloader.html" %}
+        {% include "base/shared/header.html" %}
         {% block content %}{% endblock content %}
+        {% include "base/shared/footer.html" %}
+    </main>
         <!--  -->
         <!--    JavaScripts-->
         {% include "base/_footer_refrences.html" %}
