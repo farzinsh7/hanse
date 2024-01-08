@@ -53,7 +53,7 @@
         <div class="row align-items-center" style="opacity: 0.85">
             <div class="col-sm-3 text-sm-left"><a href="{% url "page:index" %}"><img src="{{ info.logo.url }}" alt="{{ info.title }}" /></a></div>
             <div class="col-sm-6 mt-3 mt-sm-0">
-                <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright 2024 Hanse Trading GmbH.</p>
+                <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright <script>document.write(/\d{4}/.exec(Date())[0])</script> Hanse Trading GmbH.</p>
             </div>
             <div class="col text-sm-right mt-3 mt-sm-0"><a class="color-white" href="https://farzinshams.com/" target="_blank"> Designed by Farzin</a></div>
         </div>
