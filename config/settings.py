@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'rosetta',
+    'modeltranslation',
     'django_render_partial',
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
