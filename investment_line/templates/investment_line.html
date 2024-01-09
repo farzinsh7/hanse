@@ -2,5 +2,27 @@
 {% load static %}
 {% block title %}{{ investment.title }}{% endblock title %}
 {% block content %}
-
+<section class="background-11 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-4">
+                <div class="overflow-hidden" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                    <h4 data-zanim='{"delay":0.1}'>{{ investment.title }}</h4>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-12"><img class="radius-tr-secondary radius-tl-secondary" src="{{ investment.image.url }}" alt=""></div>
+                    <div class="col-12">
+                        <div class="background-white p-5 radius-secondary">
+                            <p>{{ investment.description|safe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.row-->
+    </div>
+    <!--/.container-->
+</section>
 {% endblock content %}

@@ -25,6 +25,8 @@ urlpatterns = [
     path('',include('home.urls')),
     path('',include('about.urls')),
     path('',include('contact_us.urls')),
+    path('trading/',include('trading_line.urls')),
+    path('investment/',include('investment_line.urls')),
 ]
 
 
