@@ -76,7 +76,7 @@
                                 <h5 data-zanim='{"delay":0}'>{{ trade.title }}</h5>
                             </div>
                             <div class="overflow-hidden">
-                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ trade.description|safe|truncatechars:150 }}</p>
+                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ trade.description|safe|truncatewords:50 }}</p>
                             </div>
                             <div class="overflow-hidden">
                                 <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="{% url "trading:line" trade.slug %}">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
@@ -102,7 +102,7 @@
                                 <h5 data-zanim='{"delay":0}'>{{ invest.title }}</h5>
                             </div>
                             <div class="overflow-hidden">
-                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ invest.description|safe|truncatechars:150 }}</p>
+                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ invest.description|safe|truncatewords:50 }}</p>
                             </div>
                             <div class="overflow-hidden">
                                 <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="{% url "investment:line" invest.slug %}">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
