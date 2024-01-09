@@ -58,12 +58,13 @@
     </section>
     <section class="background-11">
         <div class="container">
-            <h3 class="text-center fs-2 fs-md-3">Our Services</h3>
+            <h3 class="text-center fs-2 fs-md-3">Our business lines</h3>
             <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
-            <div class="row no-gutters pos-relative mt-6">
+            {% for trade in trading  %}
+            <div class="row no-gutters pos-relative {% if forloop.first %}mt-6{% endif %}">
                 <div class="elixir-caret d-none d-lg-block"></div>
-                <div class="col-lg-6 py-3 py-lg-0 mb-0" style="min-height:400px;">
-                    <div class="background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0" style="background-image:url({% static "images/6.jpg" %});">
+                <div class="col-lg-6 py-3 py-lg-0 mb-0 {% cycle '' 'order-lg-2' %}" style="min-height:400px;">
+                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({{ trade.image.url }});">
                     </div>
                     <!--/.background-holder-->
                 </div>
@@ -71,64 +72,46 @@
                     <div class="d-flex align-items-center h-100">
                         <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
                             <div class="overflow-hidden">
-                                <h5 data-zanim='{"delay":0}'>Business Consulting</h5>
+                                <h5 data-zanim='{"delay":0}'>Trading Line</h5>
+                                <h5 data-zanim='{"delay":0}'>{{ trade.title }}</h5>
                             </div>
                             <div class="overflow-hidden">
-                                <p class="mt-3" data-zanim='{"delay":0.1}'>As one of the world’s largest accountancy networks, elixir helps a diverse range of clients with a diverse range of needs.This is especially true of our Advisory Practice, which provides corporate finance and transaction services, business restructuring.</p>
+                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ trade.description|safe|truncatechars:150 }}</p>
                             </div>
                             <div class="overflow-hidden">
-                                <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="#">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
+                                <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="{% url "trading:line" trade.slug %}">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters pos-relative mt-4 mt-lg-0">
+            {% endfor %}
+            {% for invest in investment  %}
+            <div class="row no-gutters pos-relative">
                 <div class="elixir-caret d-none d-lg-block"></div>
-                <div class="col-lg-6 py-3 py-lg-0 mb-0 order-lg-2" style="min-height:400px;">
-                    <div class="background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0" style="background-image:url({% static "images/7.jpg" %});">
+                <div class="col-lg-6 py-3 py-lg-0 mb-0 {% cycle '' 'order-lg-2' %}" style="min-height:400px;">
+                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({{ invest.image.url }});">
                     </div>
                     <!--/.background-holder-->
                 </div>
-                <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary radius-br-lg-0">
+                <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary radius-br-lg-0 radius-tr-lg-secondary">
                     <div class="d-flex align-items-center h-100">
                         <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
                             <div class="overflow-hidden">
-                                <h5 data-zanim='{"delay":0}'>Tax consulting</h5>
+                                <h5 data-zanim='{"delay":0}'>Investment Line</h5>
+                                <h5 data-zanim='{"delay":0}'>{{ invest.title }}</h5>
                             </div>
                             <div class="overflow-hidden">
-                                <p class="mt-3" data-zanim='{"delay":0.1}'>Elixir serves clients across the country and around the world as they navigate an increasingly complex tax landscape. Our tax professionals draw on deep experience and industry-specific knowledge to deliver clients the insights and innovation they need.</p>
+                                <p class="mt-3" data-zanim='{"delay":0.1}'>{{ invest.description|safe|truncatechars:150 }}</p>
                             </div>
                             <div class="overflow-hidden">
-                                <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="#">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
+                                <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="{% url "investment:line" invest.slug %}">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row no-gutters pos-relative mt-4 mt-lg-0">
-                <div class="elixir-caret d-none d-lg-block"></div>
-                <div class="col-lg-6 py-3 py-lg-0 mb-0" style="min-height:400px;">
-                    <div class="background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0 radius-tl-lg-0 radius-bl-0 radius-bl-lg-secondary" style="background-image:url({% static "images/8.jpg" %});">
-                    </div>
-                    <!--/.background-holder-->
-                </div>
-                <div class="col-lg-6 px-lg-5 py-lg-6 p-4 my-lg-0 background-white radius-bl-secondary radius-bl-lg-0 radius-br-secondary">
-                    <div class="d-flex align-items-center h-100">
-                        <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <div class="overflow-hidden">
-                                <h5 data-zanim='{"delay":0}'>Advisory</h5>
-                            </div>
-                            <div class="overflow-hidden">
-                                <p class="mt-3" data-zanim='{"delay":0.1}'>To help you understand what this road looks like, we surveyed 1165 digital marketers across Europe and North America to explore current trends and priorities in digital marketing.</p>
-                            </div>
-                            <div class="overflow-hidden">
-                                <div data-zanim='{"delay":0.2}'><a class="d-flex align-items-center" href="#">Learn More <div class="overflow-hidden ml-2"><span class="d-inline-block" data-zanim='{"from":{"opacity":0,"x":-30},"to":{"opacity":1,"x":0},"delay":0.8}'>&xrarr;</span></div></a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
             <!--/.row-->
         </div>
         <!--/.container-->
@@ -175,14 +158,14 @@
                 <div class="col">
                     <div class="owl-carousel owl-theme owl-dot-round" data-options='{"nav":true,"dots":false,"loop":true,"autoplay":true,"autoplayHoverPause":true,"items":1}'>
                         {% for review in home.customer.all  %}
-                        <div class="row px-lg-8">
-                            <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{{ review.image.url }}" alt="Member" style="width: auto" /></div>
-                            <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
-                                <p class="lead fw-400">{{ review.description }}</p>
-                                <h6 class="fs-0 mb-1 mt-4">{{ review.name }}</h6>
-                                <p class="mb-0 color-7">{{ review.position }}</p>
+                            <div class="row px-lg-8">
+                                <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{{ review.image.url }}" alt="Member" style="width: auto" /></div>
+                                <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
+                                    <p class="lead fw-400">{{ review.description }}</p>
+                                    <h6 class="fs-0 mb-1 mt-4">{{ review.name }}</h6>
+                                    <p class="mb-0 color-7">{{ review.position }}</p>
+                                </div>
                             </div>
-                        </div>
                         {% endfor %}
                     </div>
                 </div>
@@ -191,7 +174,7 @@
         </div>
         <!--/.container-->
     </section>
-    <section class="background-10 py-6">
+    {% comment %} <section class="background-10 py-6">
         <div class="container">
             <div class="row align-items-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                 <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo2.png" %}" alt="" data-zanim="{}" /></div>
@@ -258,5 +241,5 @@
             <!--/.row-->
         </div>
         <!--/.container-->
-    </section>
+    </section> {% endcomment %}
 {% endblock content %}
