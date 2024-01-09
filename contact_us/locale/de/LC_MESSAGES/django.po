@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-09 14:44+0330\n"
+"PO-Revision-Date: 2024-01-09 15:01+0000\n"
+"Last-Translator:   <admin@gmnail.co>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\contact_us\templates\contact.html:15
+#: .\contact_us\templates\contact.html:19
+msgid "Contact"
+msgstr "Contact"
+
+#: .\contact_us\templates\contact.html:18
+msgid "Home"
+msgstr "Thuis"
+
+#: .\contact_us\templates\contact.html:35
+msgid "Hamburg Office"
+msgstr "Hamburg-kantoor"
+
+#: .\contact_us\templates\contact.html:40
+msgid "Phone"
+msgstr "Telefoon"
+
+#: .\contact_us\templates\contact.html:45
+msgid "Email"
+msgstr "E-mail"
+
+#: .\contact_us\templates\contact.html:55
+msgid "Request a Free Quote"
+msgstr "Vraag een gratis offerte aan"
+
+#: .\contact_us\templates\contact.html:72
+msgid "Send Now"
+msgstr "Nu verzenden"

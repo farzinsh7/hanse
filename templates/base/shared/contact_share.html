@@ -1,10 +1,11 @@
+{% load i18n %}
 <section class=" background-primary py-6">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md">
-                <h4 class="color-white mb-0">Hanse promises to provide you with 24/7 support services.</h4>
+                <h4 class="color-white mb-0">{% trans "Hanse promises to provide you with 24/7 support services." %}</h4>
             </div>
-            <div class="col-md-auto mt-md-0 mt-4"><a class="btn btn-white btn-capsule" href="{% url "contact:page" %}">Contact Us</a></div>
+            <div class="col-md-auto mt-md-0 mt-4"><a class="btn btn-white btn-capsule" href="{% url "contact:page" %}">{% trans "Contact Us" %}</a></div>
         </div>
         <!--/.row-->
     </div>

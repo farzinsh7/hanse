@@ -12,11 +12,11 @@
             <div class="row pt-6" data-inertia='{"weight":1.5}'>
                 <div class="col-md-8 px-md-0 color-white" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="overflow-hidden">
-                        <h1 class="color-white fs-4 fs-md-5 mb-0 zopacity" data-zanim='{"delay":0}'>Contact</h1>
+                        <h1 class="color-white fs-4 fs-md-5 mb-0 zopacity" data-zanim='{"delay":0}'>{% trans "Contact" %}</h1>
                         <div class="nav zopacity" aria-label="breadcrumb" role="navigation" data-zanim='{"delay":0.1}'>
                             <ol class="breadcrumb fs-1 pl-0 fw-700">
-                                <li class="breadcrumb-item"><a class="color-white" href="{% url "page:index" %}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                                <li class="breadcrumb-item"><a class="color-white" href="{% url "page:index" %}">{% trans "Home" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans "Contact" %}</li>
                             </ol>
                         </div>
                     </div>
@@ -32,17 +32,17 @@
         <div class="row align-items-stretch justify-content-center">
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <div class="h-100 px-5 py-4 background-white radius-secondary">
-                    <h5 class="mb-3">Hamburg Office</h5>{{ contact.address }}
+                    <h5 class="mb-3">{% trans "Hamburg Office" %}</h5>{{ contact.address }}
                 </div>
             </div>
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <div class="h-100 px-5 py-4 background-white radius-secondary">
-                    <h5 class="mb-3">Phone</h5><a href="tel:{{ contact.phone|safe }}">{{ contact.phone }}</a>
+                    <h5 class="mb-3">{% trans "Phone" %}</h5><a href="tel:{{ contact.phone|safe }}">{{ contact.phone }}</a>
                 </div>
             </div>
             <div class="col-lg-4 mb-4 mb-lg-0">
                 <div class="h-100 px-5 py-4 background-white radius-secondary">
-                    <h5 class="mb-3">Email</h5><a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+                    <h5 class="mb-3">{% trans "Email" %}</h5><a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
                 </div>
             </div>
             <div class="col-12 mt-4">
@@ -52,7 +52,7 @@
             </div>
             <div class="col-12 mt-4">
                 <div class="background-white p-5 h-100 radius-secondary">
-                    <h5>Request a Free Quote</h5>
+                    <h5>{% trans "Request a Free Quote" %}</h5>
                     <form class="zform mt-3" action="#" method="post">
                         {% csrf_token %}
                         <div class="row">
@@ -69,7 +69,7 @@
                                 {{ form.message }}
                             </div>
                             <div class="col-12 mt-4">
-                                <button class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">Send Now</span></button>
+                                <button class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">{% trans "Send Now" %}</span></button>
                             </div>
                         </div>
                     </form>

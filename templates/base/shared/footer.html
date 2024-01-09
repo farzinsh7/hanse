@@ -1,11 +1,12 @@
+{% load i18n %}
 {% load static %}
 <section style="background-color: #a11216">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="background-primary color-white p-5 p-lg-6 radius-secondary">
-                    <h4 class="color-white fs-1 fs-lg-2 mb-1">Sign up for email alerts</h4>
-                    <p class="color-white">Stay current with our latest insights</p>
+                    <h4 class="color-white fs-1 fs-lg-2 mb-1">{% trans "Sign up for email alerts" %}</h4>
+                    <p class="color-white">{% trans "Stay current with our latest insights" %}</p>
                     <form class="mt-4">
                         <div class="row align-items-center">
                             <div class="col-md-7 pr-md-0">
@@ -14,7 +15,7 @@
                                 </div>
                             </div>
                             <div class="col-md-5 mt-3 mt-md-0">
-                                <button class="btn btn-warning btn-block" type="submit"><span class="color-primary fw-600">Submit</span></button>
+                                <button class="btn btn-warning btn-block" type="submit"><span class="color-primary fw-600">{% trans "" %}Submit</span></button>
                             </div>
                         </div>
                     </form>
@@ -53,9 +54,9 @@
         <div class="row align-items-center" style="opacity: 0.85">
             <div class="col-sm-3 text-sm-left"><a href="{% url "page:index" %}"><img src="{{ info.logo.url }}" alt="{{ info.title }}" /></a></div>
             <div class="col-sm-6 mt-3 mt-sm-0">
-                <p class="color-white lh-6 mb-0 fw-600">&copy; Copyright <script>document.write(/\d{4}/.exec(Date())[0])</script> Hanse Trading GmbH.</p>
+                <p class="color-white lh-6 mb-0 fw-600">&copy; {% trans "Copyright" %} <script>document.write(/\d{4}/.exec(Date())[0])</script> {% trans "Hanse Trading GmbH" %}.</p>
             </div>
-            <div class="col text-sm-right mt-3 mt-sm-0"><a class="color-white" href="https://farzinshams.com/" target="_blank"> Designed by Farzin</a></div>
+            <div class="col text-sm-right mt-3 mt-sm-0"><a class="color-white" href="https://farzinshams.com/" target="_blank"> {% trans "Designed by" %} Farzin</a></div>
         </div>
         <!--/.row-->
     </div>
