@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',
     'contact_us.apps.ContactUsConfig',
+    'trading_line.apps.TradingLineConfig',
 ]
 
 MIDDLEWARE = [
