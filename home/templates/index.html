@@ -217,13 +217,17 @@
                 <div class="col-md-6 col-lg-6 py-0 mt-4 mt-lg-0">
                     <div class="background-white pb-4 h-100 radius-secondary"><img class="w-100 radius-tr-secondary radius-tl-secondary" src="{% static "images/9.jpg" %}" alt="Featured Image" />
                         <div class="px-4 pt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <div class="overflow-hidden"><a href="news.html">
-                                    <h5 data-zanim='{"delay":0}'>Trading Line</h5>
-                                </a></div>
+                            <div class="overflow-hidden">
+                                <h5 data-zanim='{"delay":0}'>Trading Line</h5>
+                            </div>
                             <div class="overflow-hidden mt-2">
                                 <ul>
-                                    <li><p class="color-7" data-zanim='{"delay":0.1}'><a href="">Steel and Iron ore Business Line</a></p></li>
-                                    <li><p class="color-7" data-zanim='{"delay":0.1}'><a href="">General Trading</a></p></li>
+                                    {% for trade in trading %}
+                                        <li>
+                                            <p class="color-7" data-zanim='{"delay":0.{{ forloop.counter }}}'><a href="{% url "trading:line" trade.slug %}">{{ trade.title }}</a>
+                                            </p>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -232,14 +236,17 @@
                 <div class="col-md-6 col-lg-6 py-0 mt-4 mt-lg-0">
                     <div class="background-white pb-4 h-100 radius-secondary"><img class="w-100 radius-tr-secondary radius-tl-secondary" src="{% static "images/10.jpg" %}" alt="Featured Image" />
                         <div class="px-4 pt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <div class="overflow-hidden"><a href="news.html">
-                                    <h5 data-zanim='{"delay":0}'>Investment Line</h5>
-                                </a></div>
+                            <div class="overflow-hidden">
+                                <h5 data-zanim='{"delay":0}'>Investment Line</h5>
+                            </div>
                             <div class="overflow-hidden mt-2">
                                 <ul>
-                                    <li>
-                                        <p class="color-7" data-zanim='{"delay":0.1}'><a href="">Base and Precious Metals Mines</a></p>
-                                    </li>
+                                    {% for invest in investment %}
+                                        <li>
+                                            <p class="color-7" data-zanim='{"delay":0.{{ forloop.counter }}}'><a href="{% url "investment:line" invest.slug %}">{{ invest.title }}</a>
+                                            </p>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                             

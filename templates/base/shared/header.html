@@ -31,13 +31,24 @@
                     <li><a href="{% url "about:page" %}">About</a></li>
                     <li><a href="JavaScript:void(0)">business lines</a>
                         <ul class="dropdown fs--1">
-                            <li><a href="newsroom.html">Trading Line</a>
+                            <li><a href="JavaScript:void(0)">Trading Line</a>
                                 <ul class="dropdown fs--1">
-                                    <li><a href="newsroom.html">Trading Line</a></li>
-                                    <li><a href="news.html">Investment Line</a></li>
+                                    {% for trade in trading %}
+                                        <li>
+                                            <a href="{% url "trading:line" trade.slug %}">{{ trade.title }}</a>
+                                        </li>
+                                    {% endfor %}
                                 </ul>
                             </li>
-                            <li><a href="news.html">Investment Line</a></li>
+                            <li><a href="JavaScript:void(0)">Investment Line</a>
+                            <ul class="dropdown fs--1">
+                                    {% for invest in investment %}
+                                        <li>
+                                            <a href="{% url "investment:line" invest.slug %}">{{ invest.title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li><a class="d-block mr-md-9" href="{% url "contact:page" %}">Contact</a></li>
