@@ -152,6 +152,7 @@
         <!--/.container-->
     </section>
     {% include "base/shared/contact_share.html" %}
+    {% if home.customer.all %}
     <section class=" background-white">
         <div class="container">
             <div class="row">
@@ -174,72 +175,18 @@
         </div>
         <!--/.container-->
     </section>
-    {% comment %} <section class="background-10 py-6">
+    {% endif %}
+    {% if home.brands.all %}
+    <section class="background-10 py-6">
         <div class="container">
-            <div class="row align-items-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo2.png" %}" alt="" data-zanim="{}" /></div>
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo1.png" %}" alt="" data-zanim="{}" /></div>
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo6.png" %}" alt="" data-zanim="{}" /></div>
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo3.png" %}" alt="" data-zanim="{}" /></div>
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo5.png" %}" alt="" data-zanim="{}" /></div>
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{% static "images/partner/logo4.png" %}" alt="" data-zanim="{}" /></div>
+            <div class="row align-items-center justify-content-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                {% for item in home.brands.all %}
+                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{{ item.image.url }}" alt="{{ item.title }}" data-zanim="{}" /></div>
+                {% endfor %}
             </div>
             <!--/.row-->
         </div>
         <!--/.container-->
     </section>
-    <section class="background-11">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="text-center fs-2 fs-lg-3">Our business lines</h3>
-                    <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
-                </div>
-            </div>
-            <div class="row mt-lg-6">
-                <div class="col-md-6 col-lg-6 py-0 mt-4 mt-lg-0">
-                    <div class="background-white pb-4 h-100 radius-secondary"><img class="w-100 radius-tr-secondary radius-tl-secondary" src="{% static "images/9.jpg" %}" alt="Featured Image" />
-                        <div class="px-4 pt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <div class="overflow-hidden">
-                                <h5 data-zanim='{"delay":0}'>Trading Line</h5>
-                            </div>
-                            <div class="overflow-hidden mt-2">
-                                <ul>
-                                    {% for trade in trading %}
-                                        <li>
-                                            <p class="color-7" data-zanim='{"delay":0.{{ forloop.counter }}}'><a href="{% url "trading:line" trade.slug %}">{{ trade.title }}</a>
-                                            </p>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-6 py-0 mt-4 mt-lg-0">
-                    <div class="background-white pb-4 h-100 radius-secondary"><img class="w-100 radius-tr-secondary radius-tl-secondary" src="{% static "images/10.jpg" %}" alt="Featured Image" />
-                        <div class="px-4 pt-4" data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                            <div class="overflow-hidden">
-                                <h5 data-zanim='{"delay":0}'>Investment Line</h5>
-                            </div>
-                            <div class="overflow-hidden mt-2">
-                                <ul>
-                                    {% for invest in investment %}
-                                        <li>
-                                            <p class="color-7" data-zanim='{"delay":0.{{ forloop.counter }}}'><a href="{% url "investment:line" invest.slug %}">{{ invest.title }}</a>
-                                            </p>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </section> {% endcomment %}
+    {% endif %}
 {% endblock content %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SiteInformation, SocialLinks, HelpfulLinks, HomeData, Slider, Features, CustomersReview
+from .models import SiteInformation, SocialLinks, HelpfulLinks, HomeData, Slider, Features, CustomersReview, BrandImage
 
 
 class SocialLinksAdmin(admin.TabularInline):
@@ -18,6 +18,7 @@ class HelpfulLinksAdmin(admin.TabularInline):
 class SiteInformationAdmin(admin.ModelAdmin):
     inlines = [SocialLinksAdmin, HelpfulLinksAdmin]
 
+#########---------HomeData--------------##########
 
 class SliderAdmin(admin.TabularInline):
     model = Slider
@@ -34,7 +35,11 @@ class CustomersReviewAdmin(admin.TabularInline):
     extra = 1
     max_num = 5
 
+class BrandImageAdmin(admin.TabularInline):
+    model = BrandImage
+    extra = 1
+    max_num = 5
 
 @admin.register(HomeData)
-class SiteInformationAdmin(admin.ModelAdmin):
-    inlines = [SliderAdmin, FeaturesAdmin, CustomersReviewAdmin]
+class HomeDataAdmin(admin.ModelAdmin):
+    inlines = [SliderAdmin, FeaturesAdmin, CustomersReviewAdmin, BrandImageAdmin]

@@ -34,6 +34,7 @@ class Features(models.Model):
     def __str__(self):
         return self.title
 
+
 class CustomersReview(models.Model):
     name = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
@@ -43,6 +44,15 @@ class CustomersReview(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class BrandImage(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='home/brands')
+    home_data = models.ForeignKey(HomeData, null=True, on_delete=models.SET_NULL, related_name='brands')
+
+    def __str__(self):
+        return self.title
 
 
 class SiteInformation(models.Model):
