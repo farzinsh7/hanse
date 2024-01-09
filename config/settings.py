@@ -124,6 +124,24 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ('de', 'Deutsch'),
+    ('en', 'English')
+]
+
+ROSETTA_LANGUAGES = [
+    ('de', 'Deutsch'),
+    ('en_US', 'English')
+]
+
+LOCALE_PATHS = [
+    BASE_DIR / 'about' / 'locale',
+    BASE_DIR / 'home' / 'locale',
+    BASE_DIR / 'contact_us' / 'locale',
+    BASE_DIR / 'trading_line' / 'locale',
+    BASE_DIR / 'investment_line' / 'locale',
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

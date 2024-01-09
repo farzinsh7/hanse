@@ -1,4 +1,5 @@
 {% extends "base/main_base.html" %}
+{% load i18n %}
 {% load static %}
 {% block title %}{{ about.title }}{% endblock title %}
 {% block description %}{{ about.description|striptags|truncatewords:30 }}{% endblock description %}
@@ -12,11 +13,11 @@
             <div class="row pt-6" data-inertia='{"weight":1.5}'>
                 <div class="col-md-8 px-md-0 color-white" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="overflow-hidden">
-                        <h1 class="color-white fs-4 fs-md-5 mb-0 zopacity" data-zanim='{"delay":0}'>About</h1>
+                        <h1 class="color-white fs-4 fs-md-5 mb-0 zopacity" data-zanim='{"delay":0}'>{% trans "About" %}</h1>
                         <div class="nav zopacity" aria-label="breadcrumb" role="navigation" data-zanim='{"delay":0.1}'>
                             <ol class="breadcrumb fs-1 pl-0 fw-700">
-                                <li class="breadcrumb-item"><a class="color-white" href="{% url "page:index" %}">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">About</li>
+                                <li class="breadcrumb-item"><a class="color-white" href="{% url "page:index" %}">{% trans "Home" %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans "About" %}</li>
                             </ol>
                         </div>
                     </div>
@@ -38,7 +39,7 @@
             <div class="col-lg-8 px-5 py-6 my-lg-0 background-white radius-tr-lg-secondary radius-br-secondary radius-bl-secondary radius-bl-lg-0">
                 <div class="d-flex align-items-center h-100">
                     <div data-zanim-timeline="{}" data-zanim-trigger="scroll">
-                        <h5 data-zanim='{"delay":0}'>Message From CEO</h5>
+                        <h5 data-zanim='{"delay":0}'>{% trans "Message From CEO" %}</h5>
                         <p class="my-4" data-zanim='{"delay":0.1}'>{{ about.quote|safe }}</p>
                         <h5 class="text-uppercase mt-3 fw-500 mb-1" data-zanim='{"delay":0.3}'>{{ about.ceo_name }}</h5>
                         <h6 class="color-7 fw-600" data-zanim='{"delay":0.4}'>{{ about.ceo_position }}</h6>
@@ -48,7 +49,7 @@
         </div>
         <div class="row mt-6">
             <div class="col">
-                <h3 class="text-center fs-2 fs-md-3">Company Overview</h3>
+                <h3 class="text-center fs-2 fs-md-3">{% trans "Company Overview" %}</h3>
                 <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
             </div>
             <div class="col-12">
