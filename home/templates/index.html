@@ -147,19 +147,19 @@
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0" data-zanim='{"delay":0}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-chatbubble-working fs-2 mr-2 icon-position-fix fw-800"></span>Vision</h5>
-                            <p class="mt-3 px-lg-3">{{ home.vision|striptags }}</p>
+                            <p class="mt-3 px-lg-3">{{ home.vision|safe }}</p>
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.1}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-android-color-palette fs-2 mr-2 icon-position-fix fw-800"></span>Mission</h5>
-                            <p class="mt-3 px-lg-3">{{ home.mission|striptags }}</p>
+                            <p class="mt-3 px-lg-3">{{ home.mission|safe }}</p>
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.2}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-ios-timer fs-2 mr-2 icon-position-fix fw-600"></span>Values</h5>
-                            <p class="mt-3 px-lg-3">{{ home.values|striptags }}</p>
+                            <p class="mt-3 px-lg-3">{{ home.values|safe }}</p>
                         </div>
                     </div>
                 </div>

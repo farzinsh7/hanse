@@ -46,38 +46,29 @@
             </div>
             <div class="col-12 mt-4">
                 <div class="background-white p-5 radius-secondary">
-                    <div class="googlemap" data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="assets/images/map-marker.png" data-zoom="17" data-theme="Tripitty">
-                        <div class="marker-content py-3">
-                            <h5>Eiffel Tower</h5>
-                            <p>Gustave Eiffel's iconic, wrought-iron 1889 tower,<br> with steps and elevators to observation decks.</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-12 mt-4">
                 <div class="background-white p-5 h-100 radius-secondary">
                     <h5>Request a Free Quote</h5>
-                    <form class="zform mt-3">
+                    <form class="zform mt-3" action="#" method="post">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="col-12">
-                                <input class="form-control" type="hidden" name="to" value="user@domain.extension">
-                                <input class="form-control background-white" type="text" placeholder="Your Name" required>
+                                {{ form.name }}
                             </div>
                             <div class="col-12 mt-4">
-                                <input class="form-control background-white" type="email" placeholder="Email" required>
+                                {{ form.email }}
                             </div>
                             <div class="col-12 mt-4">
-                                <textarea class="form-control background-white" rows="11" placeholder="Enter your descriptions here..." required></textarea>
+                                {{ form.phone }}
                             </div>
                             <div class="col-12 mt-4">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <button class="btn btn-md-lg btn-primary" type="Submit"> <span class="color-white fw-600">Send Now</span></button>
-                                    </div>
-                                    <div class="col">
-                                        <div class="zform-feedback"></div>
-                                    </div>
-                                </div>
+                                {{ form.message }}
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">Send Now</span></button>
                             </div>
                         </div>
                     </form>
