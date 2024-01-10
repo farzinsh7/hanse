@@ -55,12 +55,21 @@
                     <li><a class="d-block mr-md-9" href="{% url "contact:page" %}">{% trans "Contact" %}</a></li>
                 </ul>
                 <ul class="navbar-nav ml-lg-auto">
-                    <li><a href="JavaScript:void(0)">En</a>
+                    {% if request.LANGUAGE_CODE == 'de' %}
+                    <li><a href="JavaScript:void(0)" class="click">En</a>
                         <ul class="dropdown dropdown-lang fs--1">
-                            <li><a href="components-buttons.html">En</a></li>
-                            <li><a href="components-colors.html">De</a></li>
+                            <li><a href="#" class="en fw-bold" id="switch-language">En</a></li>
+                            <li><a class="disable fw-light" >De</a></li>
                         </ul>
                     </li>
+                    {% else %}
+                    <li><a href="JavaScript:void(0)" class="click">De</a>
+                        <ul class="dropdown dropdown-lang fs--1">
+                            <li><a class="disable fw-light">En</a></li>
+                            <li><a href="#" class="de fw-bold" id="switch-language">De</a></li>
+                        </ul>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

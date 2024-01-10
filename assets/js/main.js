@@ -11,10 +11,27 @@ $('body').imagesLoaded({ background: ".background-holder" }, function(){
     }, 800);
 });
 
-// Zanimation
-$(window).on('load', function(){
-    $('*[data-inertia]').each(function(){
-        $(this).inertia();
-    });
+(function ($) {
+	"use strict";
+    $(document).ready(function() {
+        var currentURL = window.location.href;
+        var newURL = currentURL.replace(/\/(en|de)\//, '/de/');
+        $('#switch-language').attr('href', newURL);
+        
+        $('.de').on('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            var currentURL = window.location.href;
+            var newURL = currentURL.replace(/\/(en|de)\//, '/de/');
+            window.location.href = newURL;
+        });
 
-});
+		$('.en').on('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            var currentURL = window.location.href;
+            var newURL = currentURL.replace(/\/(en|de)\//, '/en/');
+            window.location.href = newURL;
+        });
+    });
+})(jQuery);
+
+console.log('Coded by: https://FarzinShams.com');
