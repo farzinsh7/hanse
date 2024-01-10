@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from .models import SiteInformation, HomeData
-from django.views.generic import ListView
+from .models import SiteInformation, HomeData, Subscriber
+from .forms import NewsLetterFormClass
+from django.views.generic import ListView, CreateView
 from trading_line.models import Trading
 from investment_line.models import Investment
+from django.urls import reverse_lazy
 
 class Index(ListView):
     model = HomeData
@@ -31,8 +33,13 @@ class SiteHeaderView(ListView):
         return context
 
 
-class SiteFooterView(ListView):
-    model = SiteInformation
+class SiteFooterView(CreateView):
+    model = Subscriber
+    form_class = NewsLetterFormClass
+    success_url = reverse_lazy('page:index')
     template_name = 'base/shared/footer.html'
-    context_object_name = 'info'
-    queryset = SiteInformation.objects.first()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['info'] = SiteInformation.objects.first()
+        return context
