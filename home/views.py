@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from .models import SiteInformation, HomeData, Subscriber
-from .forms import NewsLetterFormClass
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView
 from trading_line.models import Trading
 from investment_line.models import Investment
-from django.urls import reverse_lazy
+from django.http import HttpResponse
 
 class Index(ListView):
     model = HomeData
@@ -33,13 +32,18 @@ class SiteHeaderView(ListView):
         return context
 
 
-class SiteFooterView(CreateView):
-    model = Subscriber
-    form_class = NewsLetterFormClass
-    success_url = reverse_lazy('page:index')
+class SiteFooterView(ListView):
+    model = SiteInformation
     template_name = 'base/shared/footer.html'
+    context_object_name = 'info'
+    queryset = SiteInformation.objects.first()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['info'] = SiteInformation.objects.first()
-        return context
+
+def create(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        new_subscriber = Subscriber(email=email,)
+        new_subscriber.save()
+        success = 'You have successfully joined our subscriber list.' 
+        return HttpResponse(success)
+

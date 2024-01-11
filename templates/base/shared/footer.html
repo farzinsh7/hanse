@@ -5,18 +5,20 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="background-primary color-white p-5 p-lg-6 radius-secondary">
-                    <h4 class="color-white fs-1 fs-lg-2 mb-1">{% trans "Sign up for email alerts" %}</h4>
-                    <p class="color-white">{% trans "Stay current with our latest insights" %}</p>
-                    <form class="mt-4" action="{% url "page:foot" %}" method="POST">
+                    <h4 id="title-1" class="color-white fs-1 fs-lg-2 mb-1">{% trans "Sign up for email alerts" %}</h4>
+                    <h3 id="thanks" class="color-success fs-1 fs-lg-2 mb-1"></h3>
+                    <h6 id="success-message" class="color-white fs-1 fs-lg-1 mb-1"></h6>
+                    <p id="title-2" class="color-white">{% trans "Stay current with our latest insights" %}</p>
+                    <form id="post-form" class="mt-4">
                         {% csrf_token %}
                         <div class="row align-items-center">
                             <div class="col-md-7 pr-md-0">
                                 <div class="input-group">
-                                    {{ form.email }}
+                                    <input class="form-control" id="email" name="email" type="text" placeholder="{% trans "Enter Email Here" %}" />
                                 </div>
                             </div>
                             <div class="col-md-5 mt-3 mt-md-0">
-                                <button class="btn btn-warning btn-block" type="submit"><span class="color-primary fw-600">{% trans "" %}Submit</span></button>
+                                <button class="btn btn-warning btn-block" type="submit"><span class="color-primary fw-600">{% trans "Submit" %}</span></button>
                             </div>
                         </div>
                     </form>

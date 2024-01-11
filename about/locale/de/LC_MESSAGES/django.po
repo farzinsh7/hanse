@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-10 11:55+0330\n"
-"PO-Revision-Date: 2024-01-10 11:56+0000\n"
+"POT-Creation-Date: 2024-01-11 08:14+0330\n"
+"PO-Revision-Date: 2024-01-11 08:15+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -44,15 +44,31 @@ msgstr "Hanse belooft u 24/7 ondersteunende diensten te bieden."
 msgid "Contact Us"
 msgstr "Neem contact met ons op"
 
-#: .\templates\base\shared\footer.html:40
+#: .\templates\base\shared\footer.html:8
+msgid "Sign up for email alerts"
+msgstr "Meld u aan voor e-mailwaarschuwingen"
+
+#: .\templates\base\shared\footer.html:9
+msgid "Stay current with our latest insights"
+msgstr "Blijf op de hoogte van onze nieuwste inzichten"
+
+#: .\templates\base\shared\footer.html:15
+msgid "Enter Email Here"
+msgstr "Voer hier uw e-mailadres in"
+
+#: .\templates\base\shared\footer.html:19
+msgid "Submit"
+msgstr "Indienen"
+
+#: .\templates\base\shared\footer.html:58
 msgid "Copyright"
 msgstr "auteursrechten"
 
-#: .\templates\base\shared\footer.html:40
+#: .\templates\base\shared\footer.html:58
 msgid "Hanse Trading GmbH"
 msgstr "Hanse Trading GmbH"
 
-#: .\templates\base\shared\footer.html:42
+#: .\templates\base\shared\footer.html:60
 msgid "Designed by"
 msgstr "Ontworpen door"
 
@@ -79,15 +95,3 @@ msgstr "Investeringslijn"
 #: .\templates\base\shared\header.html:55
 msgid "Contact"
 msgstr "Contact"
-
-#: .\templates\base\shared\newsletter.html:4
-msgid "Sign up for email alerts"
-msgstr "Meld u aan voor e-mailwaarschuwingen"
-
-#: .\templates\base\shared\newsletter.html:5
-msgid "Stay current with our latest insights"
-msgstr "Blijf op de hoogte van onze nieuwste inzichten"
-
-#: .\templates\base\shared\newsletter.html:15
-msgid "Submit"
-msgstr "Indienen"
