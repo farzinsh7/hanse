@@ -12,6 +12,7 @@ idna==3.6
 mysqlclient==2.2.1
 pillow==10.2.0
 polib==1.2.0
+python-decouple==3.8
 requests==2.31.0
 sorl-thumbnail==12.10.0
 sqlparse==0.4.4

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!jgbjoznyoy=1xpuhntjlks$#3f&g_uuk9lm7=$)1e$7wq1hq5'
+SECRET_KEY = config('THE_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -91,10 +92,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hanse',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'F@rzin123',
+        'NAME': config('THE_NAME'),
+        'HOST': config('THE_HOST'),
+        'USER': config('THE_USER'),
+        'PASSWORD': config('THE_PASSWORD'),
     }
 }
 
@@ -190,5 +191,5 @@ CKEDITOR_CONFIGS = {
 AUTH_USER_MODEL = 'account.User'
 
 
-RECAPTCHA_PUBLIC_KEY = '6Lcqsk8pAAAAAOizbCM4xTHG6hHbtQ078RxHVB13'
-RECAPTCHA_PRIVATE_KEY = '6Lcqsk8pAAAAAF7d6Ombb04F8hXg8zu_ZDGDVJsO'
+RECAPTCHA_PUBLIC_KEY = config('MY_RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = config('MY_RECAPTCHA_PRIVATE_KEY')
