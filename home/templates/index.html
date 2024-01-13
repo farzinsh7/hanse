@@ -1,4 +1,5 @@
 {% extends 'base/main_base.html' %}
+{% load thumbnail %}
 {% load i18n %}
 {% load static %}
 {% block title %}{{ home.title }}{% endblock title %}
@@ -9,7 +10,7 @@
             <li data-zanim-timeline="{}">
                 <section class="py-0">
                     <div>
-                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({{ slide.image.url }});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
+                        <div class="background-holder elixir-zanimm-scale" style="background-image:url({% thumbnail slide.image "2003x1053" crop="center" as im %}{{ im.url }}{% endthumbnail %});" data-zanimm='{"from":{"opacity":0.1,"filter":"blur(10px)","scale":1.05},"to":{"opacity":1,"filter":"blur(0px)","scale":1}}'>
                         </div>
                         <!--/.background-holder-->
                         <div class="container">
@@ -65,7 +66,7 @@
             <div class="row no-gutters pos-relative {% if forloop.first %}mt-6{% endif %}">
                 <div class="elixir-caret d-none d-lg-block"></div>
                 <div class="col-lg-6 py-3 py-lg-0 mb-0 {% cycle '' 'order-lg-2' %}" style="min-height:400px;">
-                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({{ trade.image.url }});">
+                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({% thumbnail trade.image "655x500" crop="center" as im %}{{ im.url }}{% endthumbnail %});">
                     </div>
                     <!--/.background-holder-->
                 </div>
@@ -91,7 +92,7 @@
             <div class="row no-gutters pos-relative">
                 <div class="elixir-caret d-none d-lg-block"></div>
                 <div class="col-lg-6 py-3 py-lg-0 mb-0 {% cycle '' 'order-lg-2' %}" style="min-height:400px;">
-                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({{ invest.image.url }});">
+                    <div class="{% cycle 'background-holder radius-tl-secondary radius-tr-secondary radius-tr-lg-0' 'background-holder radius-tl-secondary radius-tl-lg-0 radius-tr-secondary radius-tr-lg-0' %}" style="background-image:url({% thumbnail invest.image "655x500" crop="center" as im %}{{ im.url }}{% endthumbnail %});">
                     </div>
                     <!--/.background-holder-->
                 </div>
@@ -126,7 +127,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 pr-0 pr-lg-3"><img class="radius-secondary" src="{{ home.image_vmv.url }}" alt="" /></div>
+                <div class="col-lg-6 pr-0 pr-lg-3">
+                    {% thumbnail home.image_vmv "640x580" crop="center" as im %}
+                        <img class="radius-secondary" src="{{ im.url }}" alt="why-choose-hanse" />
+                    {% endthumbnail %}
+                </div>
                 <div class="col-lg-6 px-lg-5 mt-6 mt-lg-0" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0" data-zanim='{"delay":0}'>
@@ -161,7 +166,11 @@
                     <div class="owl-carousel owl-theme owl-dot-round" data-options='{"nav":true,"dots":false,"loop":true,"autoplay":true,"autoplayHoverPause":true,"items":1}'>
                         {% for review in home.customer.all  %}
                             <div class="row px-lg-8">
-                                <div class="col-4 col-md-3 mx-auto"><img class="radius-secondary mx-auto" src="{{ review.image.url }}" alt="Member" style="width: auto" /></div>
+                                <div class="col-4 col-md-3 mx-auto">
+                                    {% thumbnail review.image "295x295" crop="center" as im %}
+                                        <img class="radius-secondary mx-auto" src="{{ im.url }}" alt="{{ review.name }}" style="width: auto" />
+                                    {% endthumbnail %}
+                                </div>
                                 <div class="col-md-9 ml-auto mt-4 mt-md-0 px-4 px-sm-3">
                                     <p class="lead fw-400">{{ review.description }}</p>
                                     <h6 class="fs-0 mb-1 mt-4">{{ review.name }}</h6>
@@ -182,7 +191,11 @@
         <div class="container">
             <div class="row align-items-center justify-content-center" data-zanim-timeline="{}" data-zanim-trigger="scroll">
                 {% for item in home.brands.all %}
-                <div class="col-4 col-md-2 my-3 overflow-hidden"><img src="{{ item.image.url }}" alt="{{ item.title }}" data-zanim="{}" /></div>
+                <div class="col-4 col-md-2 my-3 overflow-hidden">
+                    {% thumbnail item.image "170x95" crop="center" as im %}
+                        <img src="{{ im.url }}" alt="{{ item.title }}" data-zanim="{}" />
+                    {% endthumbnail %}
+                </div>
                 {% endfor %}
             </div>
             <!--/.row-->

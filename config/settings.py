@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rosetta',
     'modeltranslation',
     'django_render_partial',
+    'sorl.thumbnail',
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',

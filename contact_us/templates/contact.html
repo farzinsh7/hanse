@@ -1,11 +1,12 @@
 {% extends "base/main_base.html" %}
 {% load i18n %}
+{% load thumbnail %}
 {% load static %}
 {% block title %}{{ contact.title }}{% endblock title %}
 {% block content %}
 <section>
     <div>
-        <div class="background-holder overlay" style="background-image:url({{ contact.image.url }});background-position: center bottom;">
+        <div class="background-holder overlay" style="background-image:url({% thumbnail contact.image "2003x542" crop="center" as im %}{{ im.url }}{% endthumbnail %});background-position: center bottom;">
         </div>
         <!--/.background-holder-->
         <div class="container">
