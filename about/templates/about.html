@@ -6,7 +6,7 @@
 {% block content %}
 <section>
     <div>
-        <div class="background-holder overlay" style="background-image:url({% static "images/background-2.jpg" %});background-position: center bottom;">
+        <div class="background-holder overlay" style="background-image:url({{ about.image.url }});background-position: center bottom;">
         </div>
         <!--/.background-holder-->
         <div class="container">
@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row no-gutters">
             <div class="col-lg-4 py-3 py-lg-0" style="min-height:400px; background-position: top">
-                <div class="background-holder radius-tl-secondary radius-bl-lg-secondary radius-tr-secondary radius-tr-lg-0" style="background-image:url({% static "images/ceo.jpg" %});">
+                <div class="background-holder radius-tl-secondary radius-bl-lg-secondary radius-tr-secondary radius-tr-lg-0" style="background-image:url({{ about.ceo_image.url }});">
                 </div>
                 <!--/.background-holder-->
             </div>
