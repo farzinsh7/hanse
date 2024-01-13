@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'modeltranslation',
     'django_render_partial',
     'sorl.thumbnail',
+    'django_recaptcha',
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',
@@ -187,3 +188,7 @@ CKEDITOR_CONFIGS = {
 
 
 AUTH_USER_MODEL = 'account.User'
+
+
+RECAPTCHA_PUBLIC_KEY = '6Lcqsk8pAAAAAOizbCM4xTHG6hHbtQ078RxHVB13'
+RECAPTCHA_PRIVATE_KEY = '6Lcqsk8pAAAAAF7d6Ombb04F8hXg8zu_ZDGDVJsO'
