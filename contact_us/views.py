@@ -1,17 +1,20 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, ListView
 from .models import ContactUS, ContactForm
-from .forms import ContactFormClass
+from django.http import HttpResponse
 
 
-class ContactUsView(CreateView):
+class ContactUsView(ListView):
     model = ContactForm
-    form_class = ContactFormClass
-    success_url = reverse_lazy('contact:page')
     template_name = 'contact.html'
+    context_object_name = 'contact'
+    queryset = ContactUS.objects.first()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['contact'] = ContactUS.objects.first()
-        return context
+def add_form(request):
+    name = request.POST.get('name')
+    email = request.POST.get('email')
+    phone = request.POST.get('phone')
+    message = request.POST.get('message')
+    form = ContactForm.objects.create(name=name, email=email, phone=phone, message=message)
+    return HttpResponse("<h5 class='color-success' >Your message has been successfully sent.</h5>")

@@ -405,6 +405,12 @@ a:focus {
   position: relative;
 }
 
+.back{
+  background-color: #ffffffa1;
+  padding: 25px;
+  border-radius: 8px;
+}
+
 .znav-container .has-megamenu>a:after {
   content: '\f107';
   font-family: 'FontAwesome';

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 14:44+0330\n"
+"POT-Creation-Date: 2024-01-15 15:17+0330\n"
 "PO-Revision-Date: 2024-01-09 15:01+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,31 +19,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\contact_us\templates\contact.html:15
-#: .\contact_us\templates\contact.html:19
+#: .\contact_us\templates\contact.html:16
+#: .\contact_us\templates\contact.html:20
 msgid "Contact"
 msgstr "Contact"
 
-#: .\contact_us\templates\contact.html:18
+#: .\contact_us\templates\contact.html:19
 msgid "Home"
 msgstr "Thuis"
 
-#: .\contact_us\templates\contact.html:35
+#: .\contact_us\templates\contact.html:36
 msgid "Hamburg Office"
 msgstr "Hamburg-kantoor"
 
-#: .\contact_us\templates\contact.html:40
+#: .\contact_us\templates\contact.html:41
 msgid "Phone"
 msgstr "Telefoon"
 
-#: .\contact_us\templates\contact.html:45
+#: .\contact_us\templates\contact.html:46
 msgid "Email"
 msgstr "E-mail"
 
-#: .\contact_us\templates\contact.html:55
+#: .\contact_us\templates\contact.html:56
 msgid "Request a Free Quote"
 msgstr "Vraag een gratis offerte aan"
 
-#: .\contact_us\templates\contact.html:72
+#: .\contact_us\templates\contact.html:73
 msgid "Send Now"
 msgstr "Nu verzenden"

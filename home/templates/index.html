@@ -15,7 +15,7 @@
                         <!--/.background-holder-->
                         <div class="container">
                             <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
-                                <div class="col-sm-8 col-lg-7 px-5 px-sm-3">
+                                <div class="col-sm-8 col-lg-7 px-5 px-sm-3 back" data-zanim='{"delay":0}'>
                                     <div class="overflow-hidden">
                                         <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>{{ slide.title }}</h1>
                                     </div>
@@ -49,7 +49,7 @@
                     <hr class="short" data-zanim='{"from":{"opacity":0,"width":0},"to":{"opacity":1,"width":"4.20873rem"},"duration":0.8}' data-zanim-trigger="scroll" />
                 </div>
             </div>
-            <div class="row mt-4 mt-md-5">
+            {% comment %} <div class="row mt-4 mt-md-5">
                 {% for item in home.features.all  %}
                 <div class="col-sm-4 col-lg-4 mt-4" data-zanim-timeline='{"delay":0.1}' data-zanim-trigger="scroll">
                     <div class="background-11 border border-color-9 radius-round mx-auto d-flex align-items-center" data-zanim='{"delay":0}' style="height:100px; width:100px"><span class="{{ item.icon }} fs-3 color-blueish mx-auto fw-600"></span></div>
@@ -57,7 +57,7 @@
                     <p class="mb-0 mt-3 px-3" data-zanim='{"delay":0.2}'>{{ item.description }}</p>
                 </div>
                 {% endfor %}               
-            </div>
+            </div> {% endcomment %}
             <!--/.row-->
         </div>
         <!--/.container-->

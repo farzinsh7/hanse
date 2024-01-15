@@ -58,22 +58,19 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12">
-                                {{ form.name }}
+                                <input name="name" class="form-control background-white" type="text" placeholder="Your Name" required>
                             </div>
                             <div class="col-12 mt-4">
-                                {{ form.email }}
+                                <input name="email" class="form-control background-white" type="email" placeholder="Email" required>
                             </div>
                             <div class="col-12 mt-4">
-                                {{ form.phone }}
+                                <input name="phone" class="form-control background-white" type="phone" placeholder="Phone" required>
                             </div>
                             <div class="col-12 mt-4">
-                                {{ form.message }}
+                                <textarea name="message" class="form-control background-white" rows="11" placeholder="Enter your descriptions here..." required></textarea>
                             </div>
-                            <div class="col-12 mt-4">
-                                {{ form.captcha }}
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">{% trans "Send Now" %}</span></button>
+                            <div id='sucess-form' class="col-12 mt-4">
+                                <button hx-post="{% url 'contact:add-form' %}" hx-target="#sucess-form" class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">{% trans "Send Now" %}</span></button>
                             </div>
                         </div>
                     </form>

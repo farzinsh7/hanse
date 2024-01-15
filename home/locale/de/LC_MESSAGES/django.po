@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-09 14:44+0330\n"
+"POT-Creation-Date: 2024-01-15 15:17+0330\n"
 "PO-Revision-Date: 2024-01-09 15:02+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,46 +19,46 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\home\templates\index.html:25
+#: .\home\templates\index.html:28
 msgid "Read more"
 msgstr "Lees verder"
 
-#: .\home\templates\index.html:25
+#: .\home\templates\index.html:30
 msgid "Contact us"
 msgstr "Neem contact met ons op"
 
-#: .\home\templates\index.html:42
+#: .\home\templates\index.html:47
 msgid "Welcome to the Hanse"
 msgstr "Welkom bij de Hanse"
 
-#: .\home\templates\index.html:62
+#: .\home\templates\index.html:68
 msgid "Our business lines"
 msgstr "Onze bedrijfslijnen"
 
-#: .\home\templates\index.html:76
+#: .\home\templates\index.html:82
 msgid "Trading Line"
 msgstr "Handelslijn"
 
-#: .\home\templates\index.html:83 .\home\templates\index.html:109
+#: .\home\templates\index.html:89 .\home\templates\index.html:115
 msgid "Learn More"
 msgstr "Kom meer te weten"
 
-#: .\home\templates\index.html:102
+#: .\home\templates\index.html:108
 msgid "Investment Line"
 msgstr "Investeringslijn"
 
-#: .\home\templates\index.html:124
+#: .\home\templates\index.html:130
 msgid "Why Choose Hanse"
 msgstr "Waarom kiezen voor Hans"
 
-#: .\home\templates\index.html:133
+#: .\home\templates\index.html:143
 msgid "Vision"
 msgstr "Visie"
 
-#: .\home\templates\index.html:139
+#: .\home\templates\index.html:149
 msgid "Mission"
 msgstr "Missie"
 
-#: .\home\templates\index.html:145
+#: .\home\templates\index.html:155
 msgid "Values"
 msgstr "Waarden"

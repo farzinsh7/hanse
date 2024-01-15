@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-11 08:14+0330\n"
-"PO-Revision-Date: 2024-01-11 08:15+0000\n"
+"POT-Creation-Date: 2024-01-15 15:17+0330\n"
+"PO-Revision-Date: 2024-01-15 15:18+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,26 +19,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\about\templates\about.html:16 .\about\templates\about.html:20
+#: .\about\templates\about.html:17 .\about\templates\about.html:21
 #: .\templates\base\shared\header.html:32
 msgid "About"
 msgstr "Over"
 
-#: .\about\templates\about.html:19 .\templates\base\shared\header.html:30
+#: .\about\templates\about.html:20 .\templates\base\shared\header.html:30
 msgid "Home"
 msgstr "Thuis"
 
-#: .\about\templates\about.html:42
+#: .\about\templates\about.html:43
 msgid "Message From CEO"
 msgstr "Bericht van CEO"
 
-#: .\about\templates\about.html:52
+#: .\about\templates\about.html:53
 msgid "Company Overview"
 msgstr "Bedrijfsoverzicht"
 
 #: .\templates\base\shared\contact_share.html:6
-msgid "Hanse promises to provide you with 24/7 support services."
-msgstr "Hanse belooft u 24/7 ondersteunende diensten te bieden."
+msgid "Monday - Friday, 09:00 - 17:00."
+msgstr "Maandag - Vrijdag, 09:00 - 17:00."
 
 #: .\templates\base\shared\contact_share.html:8
 msgid "Contact Us"
@@ -48,27 +48,27 @@ msgstr "Neem contact met ons op"
 msgid "Sign up for email alerts"
 msgstr "Meld u aan voor e-mailwaarschuwingen"
 
-#: .\templates\base\shared\footer.html:9
+#: .\templates\base\shared\footer.html:11
 msgid "Stay current with our latest insights"
 msgstr "Blijf op de hoogte van onze nieuwste inzichten"
 
-#: .\templates\base\shared\footer.html:15
+#: .\templates\base\shared\footer.html:17
 msgid "Enter Email Here"
 msgstr "Voer hier uw e-mailadres in"
 
-#: .\templates\base\shared\footer.html:19
+#: .\templates\base\shared\footer.html:21
 msgid "Submit"
 msgstr "Indienen"
 
-#: .\templates\base\shared\footer.html:58
+#: .\templates\base\shared\footer.html:60
 msgid "Copyright"
 msgstr "auteursrechten"
 
-#: .\templates\base\shared\footer.html:58
+#: .\templates\base\shared\footer.html:60
 msgid "Hanse Trading GmbH"
 msgstr "Hanse Trading GmbH"
 
-#: .\templates\base\shared\footer.html:60
+#: .\templates\base\shared\footer.html:62
 msgid "Designed by"
 msgstr "Ontworpen door"
 
@@ -95,3 +95,6 @@ msgstr "Investeringslijn"
 #: .\templates\base\shared\header.html:55
 msgid "Contact"
 msgstr "Contact"
+
+#~ msgid "Hanse promises to provide you with 24/7 support services."
+#~ msgstr "Hanse belooft u 24/7 ondersteunende diensten te bieden."
