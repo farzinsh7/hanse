@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'modeltranslation',
     'django_render_partial',
     'sorl.thumbnail',
-    'django_recaptcha',
     'account.apps.AccountConfig',
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',
@@ -189,10 +188,6 @@ CKEDITOR_CONFIGS = {
 
 
 AUTH_USER_MODEL = 'account.User'
-
-
-RECAPTCHA_PUBLIC_KEY = config('MY_RECAPTCHA_PUBLIC_KEY')
-RECAPTCHA_PRIVATE_KEY = config('MY_RECAPTCHA_PRIVATE_KEY')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -7,7 +7,7 @@ from django.core.mail import send_mail
 
 
 class ContactUsView(ListView):
-    model = ContactForm
+    model = ContactUS
     template_name = 'contact.html'
     context_object_name = 'contact'
     queryset = ContactUS.objects.first()
@@ -22,7 +22,7 @@ def add_form(request):
         form = ContactForm.objects.create(name=name, email=email, phone=phone, message=message)
 
         # Send email notification to admin
-        subject = 'New Form Submission'
+        subject = 'New Contact Form Submission'
         email_message = f"A new form submission:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
         from_email = 'hanse.trading@htg-hanse-trading.de'  # Replace with your email
         recipient_list = ['eg.styleofficial@gmail.com']  # Replace with your admin email address
