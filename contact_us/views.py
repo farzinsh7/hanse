@@ -24,7 +24,7 @@ def add_form(request):
         # Send email notification to admin
         subject = 'New Form Submission'
         email_message = f"A new form submission:\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}"
-        from_email = 'test@gravita.gold'  # Replace with your email
+        from_email = 'hanse.trading@htg-hanse-trading.de'  # Replace with your email
         recipient_list = ['eg.styleofficial@gmail.com']  # Replace with your admin email address
         send_mail(subject, email_message, from_email, recipient_list, fail_silently=False)
 
