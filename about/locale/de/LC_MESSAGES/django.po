@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-15 15:17+0330\n"
+"POT-Creation-Date: 2024-01-21 11:37+0330\n"
 "PO-Revision-Date: 2024-01-15 15:18+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +20,10 @@ msgstr ""
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\about\templates\about.html:17 .\about\templates\about.html:21
-#: .\templates\base\shared\header.html:32
 msgid "About"
 msgstr "Over"
 
-#: .\about\templates\about.html:20 .\templates\base\shared\header.html:30
+#: .\about\templates\about.html:20
 msgid "Home"
 msgstr "Thuis"
 
@@ -36,65 +35,50 @@ msgstr "Bericht van CEO"
 msgid "Company Overview"
 msgstr "Bedrijfsoverzicht"
 
-#: .\templates\base\shared\contact_share.html:6
-msgid "Monday - Friday, 09:00 - 17:00."
-msgstr "Maandag - Vrijdag, 09:00 - 17:00."
+#~ msgid "Monday - Friday, 09:00 - 17:00."
+#~ msgstr "Maandag - Vrijdag, 09:00 - 17:00."
 
-#: .\templates\base\shared\contact_share.html:8
-msgid "Contact Us"
-msgstr "Neem contact met ons op"
+#~ msgid "Contact Us"
+#~ msgstr "Neem contact met ons op"
 
-#: .\templates\base\shared\footer.html:8
-msgid "Sign up for email alerts"
-msgstr "Meld u aan voor e-mailwaarschuwingen"
+#~ msgid "Sign up for email alerts"
+#~ msgstr "Meld u aan voor e-mailwaarschuwingen"
 
-#: .\templates\base\shared\footer.html:11
-msgid "Stay current with our latest insights"
-msgstr "Blijf op de hoogte van onze nieuwste inzichten"
+#~ msgid "Stay current with our latest insights"
+#~ msgstr "Blijf op de hoogte van onze nieuwste inzichten"
 
-#: .\templates\base\shared\footer.html:17
-msgid "Enter Email Here"
-msgstr "Voer hier uw e-mailadres in"
+#~ msgid "Enter Email Here"
+#~ msgstr "Voer hier uw e-mailadres in"
 
-#: .\templates\base\shared\footer.html:21
-msgid "Submit"
-msgstr "Indienen"
+#~ msgid "Submit"
+#~ msgstr "Indienen"
 
-#: .\templates\base\shared\footer.html:60
-msgid "Copyright"
-msgstr "auteursrechten"
+#~ msgid "Copyright"
+#~ msgstr "auteursrechten"
 
-#: .\templates\base\shared\footer.html:60
-msgid "Hanse Trading GmbH"
-msgstr "Hanse Trading GmbH"
+#~ msgid "Hanse Trading GmbH"
+#~ msgstr "Hanse Trading GmbH"
 
-#: .\templates\base\shared\footer.html:62
-msgid "Designed by"
-msgstr "Ontworpen door"
+#~ msgid "Designed by"
+#~ msgstr "Ontworpen door"
 
-#: .\templates\base\shared\header.html:10
-msgid "Monday"
-msgstr "Maandag"
+#~ msgid "Monday"
+#~ msgstr "Maandag"
 
-#: .\templates\base\shared\header.html:10
-msgid "Friday"
-msgstr "Vrijdag"
+#~ msgid "Friday"
+#~ msgstr "Vrijdag"
 
-#: .\templates\base\shared\header.html:33
-msgid "Business lines"
-msgstr "Zakelijke lijnen"
+#~ msgid "Business lines"
+#~ msgstr "Zakelijke lijnen"
 
-#: .\templates\base\shared\header.html:35
-msgid "Trading Line"
-msgstr "Handelslijn"
+#~ msgid "Trading Line"
+#~ msgstr "Handelslijn"
 
-#: .\templates\base\shared\header.html:44
-msgid "Investment Line"
-msgstr "Investeringslijn"
+#~ msgid "Investment Line"
+#~ msgstr "Investeringslijn"
 
-#: .\templates\base\shared\header.html:55
-msgid "Contact"
-msgstr "Contact"
+#~ msgid "Contact"
+#~ msgstr "Contact"
 
 #~ msgid "Hanse promises to provide you with 24/7 support services."
 #~ msgstr "Hanse belooft u 24/7 ondersteunende diensten te bieden."

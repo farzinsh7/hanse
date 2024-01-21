@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-21 11:37+0330\n"
+"PO-Revision-Date: 2024-01-21 11:43+0000\n"
+"Last-Translator:   <admin@gmnail.co>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\templates\404.html:13
+msgid "oops! page not found"
+msgstr "oeps! pagina niet gevonden"
+
+#: .\templates\404.html:15
+msgid "Take Me Home"
+msgstr "Breng me naar huis"
+
+#: .\templates\base\shared\contact_share.html:6
+msgid "Monday - Friday, 09:00 - 17:00."
+msgstr "Maandag - vrijdag, 09:00 - 17:00 uur."
+
+#: .\templates\base\shared\contact_share.html:8
+msgid "Contact Us"
+msgstr "Neem contact met ons op"
+
+#: .\templates\base\shared\footer.html:8
+msgid "Sign up for email alerts"
+msgstr "Meld u aan voor e-mailwaarschuwingen"
+
+#: .\templates\base\shared\footer.html:11
+msgid "Stay current with our latest insights"
+msgstr "Blijf op de hoogte van onze nieuwste inzichten"
+
+#: .\templates\base\shared\footer.html:17
+msgid "Enter Email Here"
+msgstr "Voer hier uw e-mailadres in"
+
+#: .\templates\base\shared\footer.html:21
+msgid "Submit"
+msgstr "Indienen"
+
+#: .\templates\base\shared\footer.html:60
+msgid "Copyright"
+msgstr "auteursrechten"
+
+#: .\templates\base\shared\footer.html:60
+msgid "Hanse Trading GmbH"
+msgstr "Hanse Trading GmbH"
+
+#: .\templates\base\shared\footer.html:62
+msgid "Designed by"
+msgstr "Ontworpen door"
+
+#: .\templates\base\shared\header.html:10
+msgid "Monday"
+msgstr "Maandag"
+
+#: .\templates\base\shared\header.html:10
+msgid "Friday"
+msgstr "Vrijdag"
+
+#: .\templates\base\shared\header.html:30
+msgid "Home"
+msgstr "Thuis"
+
+#: .\templates\base\shared\header.html:32
+msgid "About"
+msgstr "Over"
+
+#: .\templates\base\shared\header.html:33
+msgid "Business lines"
+msgstr "Zakelijke lijnen"
+
+#: .\templates\base\shared\header.html:35
+msgid "Trading Line"
+msgstr "Handelslijn"
+
+#: .\templates\base\shared\header.html:44
+msgid "Investment Line"
+msgstr "Investeringslijn"
+
+#: .\templates\base\shared\header.html:55
+msgid "Contact"
+msgstr "Contact"

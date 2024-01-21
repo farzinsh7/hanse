@@ -140,6 +140,7 @@ ROSETTA_LANGUAGES = [
 ]
 
 LOCALE_PATHS = [
+    BASE_DIR /'locale',
     BASE_DIR / 'about' / 'locale',
     BASE_DIR / 'home' / 'locale',
     BASE_DIR / 'contact_us' / 'locale',

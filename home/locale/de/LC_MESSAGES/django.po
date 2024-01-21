@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-15 15:17+0330\n"
+"POT-Creation-Date: 2024-01-21 11:37+0330\n"
 "PO-Revision-Date: 2024-01-09 15:02+0000\n"
 "Last-Translator:   <admin@gmnail.co>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,34 +31,34 @@ msgstr "Neem contact met ons op"
 msgid "Welcome to the Hanse"
 msgstr "Welkom bij de Hanse"
 
-#: .\home\templates\index.html:68
+#: .\home\templates\index.html:69
 msgid "Our business lines"
 msgstr "Onze bedrijfslijnen"
 
-#: .\home\templates\index.html:82
+#: .\home\templates\index.html:83
 msgid "Trading Line"
 msgstr "Handelslijn"
 
-#: .\home\templates\index.html:89 .\home\templates\index.html:115
+#: .\home\templates\index.html:90 .\home\templates\index.html:116
 msgid "Learn More"
 msgstr "Kom meer te weten"
 
-#: .\home\templates\index.html:108
+#: .\home\templates\index.html:109
 msgid "Investment Line"
 msgstr "Investeringslijn"
 
-#: .\home\templates\index.html:130
+#: .\home\templates\index.html:131
 msgid "Why Choose Hanse"
 msgstr "Waarom kiezen voor Hans"
 
-#: .\home\templates\index.html:143
+#: .\home\templates\index.html:144
 msgid "Vision"
 msgstr "Visie"
 
-#: .\home\templates\index.html:149
+#: .\home\templates\index.html:150
 msgid "Mission"
 msgstr "Missie"
 
-#: .\home\templates\index.html:155
+#: .\home\templates\index.html:156
 msgid "Values"
 msgstr "Waarden"
