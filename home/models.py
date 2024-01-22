@@ -15,6 +15,7 @@ class HomeData(models.Model):
     
 
 class Slider(models.Model):
+    bussines_line = models.CharField(max_length=200, null=True)
     title = models.CharField(max_length=200)
     description = models.TextField(null=True)
     image = models.ImageField(upload_to='home/slider')

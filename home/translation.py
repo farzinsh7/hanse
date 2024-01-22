@@ -8,7 +8,7 @@ class HomeDataTranslationOptions(TranslationOptions):
 
 @register(Slider)
 class SliderTranslationOptions(TranslationOptions):
-    fields = ['title', 'description']
+    fields = ['bussines_line', 'title', 'description']
 
 
 @register(Features)

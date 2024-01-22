@@ -17,7 +17,8 @@
                             <div class="row h-full py-8 align-items-center" data-inertia='{"weight":1.5}'>
                                 <div class="col-sm-8 col-lg-7 px-5 px-sm-3 back" data-zanim='{"delay":0}'>
                                     <div class="overflow-hidden">
-                                        <h1 class="fs-4 fs-md-5 zopacity" data-zanim='{"delay":0}'>{{ slide.title }}</h1>
+                                        <h2 class="fs-4 fs-md-4 zopacity" data-zanim='{"delay":0}'>{{ slide.bussines_line }}</h2>
+                                        <h4 class="fs-3 fs-md-3 zopacity" data-zanim='{"delay":0}'>{{ slide.title }}</h4>
                                     </div>
                                     <div class="overflow-hidden">
                                         <p class="color-primary mt-4 mb-5 lh-2 fs-1 fs-md-2 zopacity" data-zanim='{"delay":0.1}'>{{ slide.description|truncatewords:15 }}</p>
@@ -142,19 +143,19 @@
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0" data-zanim='{"delay":0}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-chatbubble-working fs-2 mr-2 icon-position-fix fw-800"></span>{% trans "Vision" %}</h5>
-                            <p class="mt-3 px-lg-3">{{ home.vision|safe }}</p>
+                            {{ home.vision|safe }}
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.1}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-android-color-palette fs-2 mr-2 icon-position-fix fw-800"></span>{% trans "Mission" %}</h5>
-                            <p class="mt-3 px-lg-3">{{ home.mission|safe }}</p>
+                            {{ home.mission|safe }}
                         </div>
                     </div>
                     <div class="overflow-hidden">
                         <div class="px-4 px-sm-0 mt-5" data-zanim='{"delay":0.2}'>
                             <h5 class="fs-0 fs-lg-1"><span class="ion-ios-timer fs-2 mr-2 icon-position-fix fw-600"></span>{% trans "Values" %}</h5>
-                            <p class="mt-3 px-lg-3">{{ home.values|safe }}</p>
+                            {{ home.values|safe }}
                         </div>
                     </div>
                 </div>
