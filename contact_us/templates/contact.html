@@ -54,26 +54,28 @@
             <div class="col-12 mt-4">
                 <div class="background-white p-5 h-100 radius-secondary">
                     <h5>{% trans "Request a Free Quote" %}</h5>
-                    <form class="zform mt-3" action="#" method="post">
+                    <form class="zform mt-3" hx-post="{% url 'contact:add-form' %}" hx-target="#sucess-form" method="post">
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12">
-                                <input name="name" class="form-control background-white" type="text" placeholder="Your Name" required>
+                                <input name="name" class="form-control background-white" type="text" placeholder="Your Name" required/>
                             </div>
                             <div class="col-12 mt-4">
-                                <input name="email" class="form-control background-white" type="email" placeholder="Email" required>
+                                <input name="email" class="form-control background-white" type="email" placeholder="Email" required/>
                             </div>
                             <div class="col-12 mt-4">
-                                <input name="phone" class="form-control background-white" type="phone" placeholder="Phone" required>
+                                <input name="phone" class="form-control background-white" type="tel" placeholder="Phone" required/>
                             </div>
                             <div class="col-12 mt-4">
                                 <textarea name="message" class="form-control background-white" rows="11" placeholder="Enter your descriptions here..." required></textarea>
                             </div>
                             <div id='sucess-form' class="col-12 mt-4">
-                                <button hx-post="{% url 'contact:add-form' %}" hx-target="#sucess-form" class="btn btn-md-lg btn-primary" type="submit"> <span class="color-white fw-600">{% trans "Send Now" %}</span></button>
+                                <button class="btn btn-md-lg btn-primary" type="submit">
+                                    <span class="color-white fw-600">{% trans "Send Now" %}</span>
+                                </button>
                             </div>
                         </div>
-                    </form>
+                    </form>                    
                 </div>
             </div>
         </div>
